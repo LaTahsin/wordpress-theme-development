@@ -1,0 +1,6 @@
+Header hook: <?php wp_head();?> // in header.php
+Footer hook: <?php wp_footer();?> //in footer.php
+
+to include header and footer in index.php use-
+1.<?php get_header();?>
+2.<?php get_footer();?>
