@@ -1,0 +1,37 @@
+//1. first step-
+function consult_fallback_menu(){
+    ?>
+        <ul class="nav navbar-nav pull-right">
+        <li class="active">
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#blog">Blog</a>
+        </li>
+        <li>
+            <a href="#">Team</a>
+        </li>
+        <li>
+            <a href="#"><span>Contact</span></a>
+        </li>
+    </ul> 
+    <?php
+}
+?>
+
+//2.2nd step-
+          <?php
+                wp_nav_menu(array(
+                    'theme_location'=>'primary',
+                    'fallback_cb'=>'consult_fallback_menu',
+                    'container'=>'div',
+                    'container_class'=>'navbar-collapse collapse align-left',
+                    'menu'=>'ul',
+                    'menu_class'=>'nav navbar-nav'
+                ));
+            ?>
+            
+//3. don't forget to register menu
