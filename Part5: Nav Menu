@@ -1,0 +1,29 @@
+//1. in function.php ,register menu-
+
+function register_primary_menu() {
+    register_nav_menu( 'primary', 'Primary Menu' );
+}
+add_action( 'after_setup_theme', 'register_primary_menu' );
+
+//2. in menu area of index.php write this-
+<?php wp_nav_menu(array(
+    'theme_location'=>'primary',
+    'container'=>'div',
+    'container_class'=>'navbar-collapse collapse align-left',
+    'menu'=>'ul',
+    'menu_class'=>'nav navbar-nav',
+    'depth'=>'2',
+    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+	  'walker'          => new WP_Bootstrap_Navwalker(),
+
+));?>
+
+//3.for dropdown menu-
+
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+function register_primary_menu() {
+    register_nav_menu( 'primary', 'Primary Menu' );
+}
+add_action( 'after_setup_theme', 'register_primary_menu' );
+
+
