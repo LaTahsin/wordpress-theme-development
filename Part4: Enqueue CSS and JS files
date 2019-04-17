@@ -1,0 +1,15 @@
+in functions.php-
+
+<?php
+function consult_enqueue(){
+    wp_enqueue_style('GoogleFont','//fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,700,800%7CMontserrat:200,300,400,500,600,700,800,900',null,null,microtime(),'all');
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css', null,microtime(),'all');
+    wp_enqueue_style( 'favicon', get_template_directory_uri().'/images/favicon.ico', null,microtime(),'all');
+    wp_enqueue_style( 'styletheme', get_stylesheet_uri());
+
+
+
+    wp_enqueue_script( 'jquery',get_template_directory_uri().'/assets/js/jquery.min.js',null,microtime(), true );
+}
+add_action('wp_enqueue_scripts','consult_enqueue');
+?>
