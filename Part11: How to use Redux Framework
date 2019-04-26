@@ -1,0 +1,10 @@
+1. create a folder inc 
+2. upzip redux-framework-master here 
+3.  require_once('inc/redux-framework-master/redux-framework.php'); //in functions.php
+4. copy sample-config.php from sample folder to inc, rename it as you want and require it in functions.php //require_once('inc/nieve-options.php');
+5. in that folder (suppose its name is nieve-options.php) ,change prefix
+6. change menu and page title
+        'menu_title'           => __( 'Nieve Options', 'redux-framework-demo' ),
+        'page_title'           => __( 'Nieve Options', 'redux-framework-demo' ),
+7. customize it as you want
+
