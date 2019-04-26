@@ -8,3 +8,13 @@
         'page_title'           => __( 'Nieve Options', 'redux-framework-demo' ),
 7. customize it as you want
 
+8. Find the fields:
+  https://docs.reduxframework.com/category/core/fields/
+
+9. Redux parent and child section seperating-
+   use (subsection' => true,) in child section
+   
+   
+   //---------------------Demo of a custom field with parent section and subsection----------------//
+   
+
