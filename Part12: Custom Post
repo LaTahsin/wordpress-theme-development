@@ -1,0 +1,19 @@
+//sample of custom post
+//custom post
+function nieve_post(){
+    register_post_type('service',
+            array(
+                'labels'=> array(
+                'name'=>'Service',
+                'menu_name'=>'Service Menu',
+                'all_items'=>'All Servives',
+                'add_new_item'=>'Add New Service Item',
+                'edit_item'=>'Edit Service Item'
+            ),
+            'public'=> true,
+            'supports' => array('title','revisions','page-attributes')
+        ));
+}
+add_action( 'init','nieve_post');
+
+//
