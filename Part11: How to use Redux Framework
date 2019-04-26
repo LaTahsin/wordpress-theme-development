@@ -17,4 +17,43 @@
    
    //---------------------Demo of a custom field with parent section and subsection----------------//
    
+       Redux::setSection($opt_name, array(
+        'title'   => 'Footer Section',
+        'icon'    => 'el el-certificate',
+        'heading' => 'Expanded New Section Title',
+        'desc'    => '<br />This is the section description.  HTML is permitted.<br />',
+        'fields'  => array(
+            array(
+                'id'    => 'footer-menu',
+                'type'  => 'text',
+                'title' => 'A sample text box',
+            ),
+        ),
+    ));
+
+    Redux::setSection($opt_name, array(
+        'title'   => 'Footer Text',
+        'icon'    => 'el el-certificate',
+        'heading' => 'Expanded New Section Title',
+        'desc'    => '<br />This is the section description.  HTML is permitted.<br />',
+        'subsection' => true,
+        'fields'  => array(
+            array(
+                'id'    => 'footer-text',
+                'title'=>'Footer Text',
+                'desc'=>'Write Footer Text Here',
+                'type'=>'editor'
+            ),
+        ),
+    ));
+    
+    //-----------------------How to call in in your php file--------------------------------------------------
+    <?php
+global $nieve;//$opt_name
+echo $nieve['footer-text'];
+ ?>
+
+    
+    
+   
 
